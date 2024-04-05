@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "SF Pro Regular";
+  src: url(font/SFPRODISPLAYREGULAR.OTF);
+}
+@font-face {
+  font-family: "SF Pro BlackItalic";
+  src: url(font/SFPRODISPLAYBLACKITALIC.OTF);
+}
+@font-face {
+  font-family: "SF Pro Bold";
+  src: url(font/SFPRODISPLAYBOLD.OTF);
+}
+@font-face {
+  font-family: "SF Pro Heavy Italic";
+  src: url(font/SFPRODISPLAYHEAVYITALIC.OTF);
+}
+@font-face {
+  font-family: "SF Pro Light Italic";
+  src: url(font/SFPRODISPLAYLIGHTITALIC.OTF);
+}
+@font-face {
+  font-family: "SF Pro Medium";
+  src: url(font/SFPRODISPLAYMEDIUM.OTF);
+}
+@font-face {
+  font-family: "SF Pro Bold Italic";
+  src: url(font/SFPRODISPLAYSEMIBOLDITALIC.OTF);
+}
+
+@font-face {
+  font-family: "SF Pro THin Italic";
+  src: url(font/SFPRODISPLAYTHINITALIC.OTF);
+}
+@font-face {
+  font-family: "SF Pro Light Italic";
+  src: url(font/SFPRODISPLAYULTRALIGHTITALIC.OTF);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "SF Pro Regular";
+  font-weight: 100;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  height: 5vh;
+  width: 25%;
+  margin: 10px 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  padding: 2vw 4vw;
+  position: fixed;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+}
+
+nav h3 {
+  text-transform: uppercase;
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 100;
+}
+
+nav img {
+  width: 15%;
+  filter: invert(1);
+}
+
+nav i {
+  font-size: 2vw;
+  color: #fff;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+#page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+}
+
+canvas {
+  position: absolute;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 99;
+}
+
+#loop {
+  position: relative;
+  top: 25%;
+  z-index: 10;
+  width: 100vw;
+  height: fit-content;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+#loop p {
+  position: absolute;
+  left: -1vw;
+  font-size: 2.5vw;
+  rotate: -90deg;
+}
+
+#loop h1 {
+  font-size: 16vw;
+  line-height: 25vw;
+  letter-spacing: -10px;
+  word-spacing: 0;
+  font-weight: 100;
+  color: #fff;
+}
+
+#loop span {
+  -webkit-text-stroke: 3px #fff;
+  font-family: "SF Pro THin Italic";
+  color: transparent;
+}
+
+.flex {
+  width: 100%;
+  margin-top: 15vw;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 35vh;
+  padding: 1vw 6vw;
+}
+
+#page .flex p {
+  width: 50%;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin: 3vw 0;
+}
+
+.addNew {
+  width: 30vw;
+  height: 20vw;
+  background: url(https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111870_iphone13-pro-max-colors-480.png);
+  background-size: cover;
+  background-position: center;
+  /* background: red; */
+  position: relative;
+}
+
+#page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  padding: 1vw 3vw;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#page1 h4 {
+  font-size: 3vw;
+  text-align: right;
+}
+
+#page1 h1 {
+  font-size: 7vw;
+  text-align: right;
+  line-height: 5vw;
+}
+
+#page1 p {
+  font-size: 2vw;
+  text-align: right;
+  margin: 2vw 0;
+}
+
+#page1 .flex {
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.a15 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+#page1 img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: fit-content;
+}
+
+.camera img {
+  width: 25vw !important;
+  height: 25vw !important;
+  border-radius: 100%;
+}
+
+#page2 {
+  position: relative;
+  height: 78vh;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1vw 6vw;
+}
+
+#page2 p,
+#page2 a {
+  font-size: 1.4vw;
+  color: #888;
+  text-decoration: none;
+}
+
+#page2 h1 {
+  font-size: 10vw;
+  line-height: 10vw;
+  letter-spacing: -10px;
+  word-spacing: 0;
+  font-weight: 100;
+  color: #fff;
+}
+@media screen and (max-width: 1000px) {
+  /* Adjust styles for smaller screens */
+
+  nav {
+    height: 7vh;
+    width: 30%;
+  }
+
+  nav h3 {
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: #fff;
+    font-weight: 100;
+  }
+
+  nav img {
+    width: 15%;
+    filter: invert(1);
+  }
+
+  nav i {
+    font-size: 3vw;
+    color: #fff;
+  }
+
+  canvas {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  #loop {
+    top: 20%;
+  }
+
+  #page .flex p {
+    font-size: 2vw;
+  }
+
+  .addNew {
+    width: 30vw;
+    height: 20vw;
+  }
+
+  #page2 h1 {
+    letter-spacing: -5px;
+  }
+
+  #page2 p,
+  #page2 a {
+    font-size: 2.2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    height: 8vh;
+    width: 50%;
+    gap: 5vw;
+  }
+
+  nav h3 {
+    text-transform: uppercase;
+    font-size: 4vw;
+    color: #fff;
+    font-weight: 100;
+  }
+
+  nav img {
+    width: 10%;
+    filter: invert(1);
+  }
+
+  nav i {
+    font-size: 4vw;
+    color: #fff;
+  }
+
+  canvas {
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+
+  #loop {
+    top: 40%;
+    white-space: wrap;
+    padding: 2vw 5vw;
+  }
+
+  #loop p {
+    position: absolute;
+    top: -3vw;
+    left: 5vw;
+    font-size: 5vw;
+    rotate: 0deg;
+  }
+
+  #loop h1 {
+    font-size: 18vw;
+    line-height: 15vw;
+    letter-spacing: -5px;
+    word-spacing: 0;
+    font-weight: 100;
+    color: #fff;
+    margin: 5vw 0;
+    text-align: left;
+  }
+
+  #page .flex {
+    width: 100%;
+    margin-top: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+    padding: 0vw 5vw;
+  }
+
+  #page .flex p {
+    font-size: 5vw;
+    width: 100%;
+  }
+
+  #page1 .flex {
+    display: none;
+  }
+
+  .addNew {
+    display: none;
+  }
+
+  #page2 h1 {
+    letter-spacing: -5px;
+    font-size: 15vw;
+  }
+
+  #page2 p,
+  #page2 a {
+    font-size: 3.7vw;
+    margin: 5vw 0;
+  }
+}
